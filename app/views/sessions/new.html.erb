@@ -1,0 +1,13 @@
+<%= form_tag sessions_create_path do %>
+  <%= label_tag :name %>
+  <%= text_field_tag :name %>
+  <br>
+  <%= label_tag :password %>
+  <%= password_field_tag :password %>
+  <br>
+  <%= submit_tag %>
+<% end %>
+
+<br>
+
+<%= link_to "Signup", new_user_path %>
