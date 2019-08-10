@@ -1,0 +1,13 @@
+<h1>Login user page</h1>
+
+<%= form_for :user do |f| %>
+  Username: <%= f.text_field :name %><br>
+  Password: <%= f.password_field :password %><br>
+  <%= f.submit "login" %><br>
+<% end %>
+
+<% if flash.alert %>
+  <p><%= flash.alert %> Click <%= link_to "here", root_path %> to go back to the signup page.</p>
+<% else %>
+  <p>If you are not a user, please <%= link_to "signup", root_path %>.</p>
+<% end %>
